@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html">
+	<head>
+		<title>Willkommen Meister</title>
+	</head>
+	<body>
+		<h1><h:outputText value="Meister"/></h1>
+		<h2><h:outputText value="Nehmen sie einen Schüler an"/></h2>
+		<h:messages showDetail="true" showSummary="false"/>
+		<h:form id="form">
+		<h:panelGrid id="grid" columns="2">
+			<h:outputLabel value="Name:" for="name"/>
+			<h:inputText id="name" value="#{customer.name}"
+					required="true"/>
+				<h:outputLabel value="Alter:" for="alter2"/>
+			<h:inputText id="alter2" value="#{customer.alter2}"
+					required="true"/>
+					<h:outputLabel value="Gröse in cm:" for="grose"/>
+			<h:inputText id="grose" value="#{customer.grose}"
+					required="true"/>
+		</h:panelGrid>
+		<h:commandButton id="save" action="#{customer.save}" value="Save"/>
+		
+		</h:form>
+	</body>
+</html>
