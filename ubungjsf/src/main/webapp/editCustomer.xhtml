@@ -23,6 +23,16 @@
 					<h:outputLabel value="Gröse in cm:" for="grose"/>
 			<h:inputText id="grose" value="#{customer.grose}"
 					required="true"/>
+					</h:panelGrid>
+					
+		<h:panelGrid id="grid2" columns="4">
+					<h:outputLabel value="Geburtsdatum(TT,MM,JJJJ):" for="tag"/>
+			<h:inputText id="tag" value="#{customer.tag}"
+					required="true"/>
+			<h:inputText id="monat" value="#{customer.monat}"
+					required="true"/>		
+			<h:inputText id="jahr" value="#{customer.jahr}"
+					required="true"/>
 		</h:panelGrid>
 		<h:commandButton id="save" action="#{customer.save}" value="Save"/>
 		

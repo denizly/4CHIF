@@ -1,5 +1,7 @@
 package at.irian.jsfatwork.gui.page;
 
+import java.util.Date;
+
 import javax.faces.context.FacesContext;
 import javax.faces.event.ValueChangeEvent;
 import javax.faces.bean.SessionScoped;
@@ -16,8 +18,61 @@ public class Customer {
 	private String name;
 	private int alter2;
 	private int grose;
+	private int tag;
+	private int monat;
+	private int jahr;
+	private Date datum;
+	
 	
 
+	public Date getDatum() {
+		Date dt = new Date();
+		dt.setDate(tag);
+		dt.setMonth(monat-1);
+		dt.setYear(jahr);
+		datum=dt;
+		return datum;
+	}
+
+	public void setDatum(Date datum) {
+		Date dt = new Date();
+		dt.setDate(tag);
+		dt.setMonth(monat-1);
+		dt.setYear(jahr);
+		datum=dt;
+		
+	}
+
+	public int getTag() {
+		return tag;
+	}
+
+	public void setTag(int tag) {
+		this.tag = tag;
+	}
+
+	public int getMonat() {
+		return monat;
+	}
+
+	public void setMonat(int monat) {
+		this.monat = monat;
+	}
+
+	public int getJahr() {
+		return jahr;
+	}
+
+	public void setJahr(int jahr) {
+		this.jahr = jahr;
+	}
+
+	public void Datum(){
+		Date dt = new Date();
+		dt.setDate(tag);
+		dt.setMonth(monat);
+		dt.setYear(jahr);
+	}
 	public int getGrose() {
 		return grose;
 	}
